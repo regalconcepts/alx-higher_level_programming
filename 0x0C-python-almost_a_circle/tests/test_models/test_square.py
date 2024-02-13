@@ -302,6 +302,7 @@ class TestSquare_y(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Square(3, 0, -1)
 
+
 class TestSquare_order_of_initialization(unittest.TestCase):
     """Unittests for testing order of Square attribute initialization."""
 
@@ -420,6 +421,7 @@ class TestSquare_stdout(unittest.TestCase):
         s = Square(3, 4, 5, 2)
         with self.assertRaises(TypeError):
             s.display(1)
+
 
 class TestSquare_update_args(unittest.TestCase):
     """Unittests for testing update args method of the Square class."""
@@ -653,6 +655,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

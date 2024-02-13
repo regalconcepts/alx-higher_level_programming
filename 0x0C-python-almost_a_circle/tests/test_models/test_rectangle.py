@@ -35,7 +35,7 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_one_arg(self):
         with self.assertRaises(TypeError):
             Rectangle(1)
-    
+
     def test_two_args(self):
         r1 = Rectangle(10, 2)
         r2 = Rectangle(2, 10)
@@ -333,7 +333,6 @@ class TestRectangle_x(unittest.TestCase):
 
 class TestRectangle_y(unittest.TestCase):
     """Unittests for testing initialization of Rectangle y attribute."""
-
 
     def test_None_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -804,6 +803,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()
