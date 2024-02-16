@@ -110,7 +110,8 @@ class Rectangle(Base):
                 for arg in args:
                     if a == 0:
                         if arg is None:
-                            self.__init__(self.width, self.height, self.x, self.y)
+                            self.__init__(self.width, self.height, self.x,
+                                          self.y)
                         else:
                             self.id = arg
                     elif a == 1:
@@ -127,7 +128,8 @@ class Rectangle(Base):
                 for k, v in kwargs.items():
                     if k == "id":
                         if v is None:
-                            self.__init__(self.width, self.height, self.x, self.y)
+                            self.__init__(self.width, self.height, self.x,
+                                          self.y)
                         else:
                             self.id = v
                     elif k == "width":
@@ -152,5 +154,6 @@ class Rectangle(Base):
         def __str__(self):
             """Return the print() and str() representation of the Rectangle."""
             return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                            self.x, self.y,
-                                                            self.width, self.height)
+                                                           self.x, self.y,
+                                                           self.width,
+                                                           self.height)
